@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Make the subnav scroll</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="fixed flex items-center w-full py-2 text-gray-900 bg-yellow-400 sm:py-6 sm:flex-wrap">
+      <div class="flex flex-grow">
+        <a href="#"> <h1 class="text-xl font-bold ml-6">AcmeCorp</h1> </a>
+      </div> <!-- .c -->
+      <div class="block">
+        <div class="flex">
+          <div x-data="{ open: false }">
+            <button @click="open = true" class="mr-12">Menu</button>
+            <div class="absolute right-0 w-full bg-yellow-400 mt-2">
+              <div class="relative h-full">
+                <ul x-show="open" @click.away="open = false" class="h-full">
+                  <h4 class="pt-5 pb-3 text-sm font-semibold tracking-widest text-gray-800 uppercase">Section 1</h4>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <li class="py-2 block hover:text-red-500">Thing 1</li>
+                  <h4 class="pt-5 pb-3 text-sm font-semibold tracking-widest text-gray-800 uppercase">Section 2</h4>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <li class="py-2 block hover:text-red-500">Thing 2</li>
+                  <h4 class="pt-5 pb-3 text-sm font-semibold tracking-widest text-gray-800 uppercase">Section 3</h4>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <li class="py-2 block hover:text-red-500">Thing 3</li>
+                  <h4 class="pt-5 pb-3 text-sm font-semibold tracking-widest text-gray-800 uppercase">END</h4>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v1.9.7/dist/alpine.js" defer></script>
+  </body>
+</html>
